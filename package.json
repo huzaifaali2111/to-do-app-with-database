@@ -1,0 +1,27 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "To Do List, That can store data permamently in Database. Fully Functional",
+  "homepage": "https://github.com/huzaifaali2111/to-do-app-with-database#readme",
+  "bugs": {
+    "url": "https://github.com/huzaifaali2111/to-do-app-with-database/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huzaifaali2111/to-do-app-with-database.git"
+  },
+  "license": "ISC",
+  "author": "Huzaifa Ali",
+  "type": "commonjs",
+  "main": "Index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.0.2",
+    "nodemon": "^3.1.11"
+  }
+}
