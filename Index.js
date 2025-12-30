@@ -1,14 +1,16 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
-
+const path = require('path');
 dotenv.config(); 
 connectDB();
-
 const app = express();
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
 app.get("/", (req, res) => {
-  res.send("Server Running");
+  res.render("index")
 });
 
 app.listen(5000, () => {
