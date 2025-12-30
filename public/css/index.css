@@ -76,3 +76,6 @@
      border: 2px solid black;
      margin: auto;
 }
+.taskHead th{
+    padding: 30px 10px 5px 2px;
+}
