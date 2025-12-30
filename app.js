@@ -18,12 +18,14 @@ app.get("/", (req, res) => {
 });
 app.post("/add-todo", async (req, res) => {
   try {
-    const taskText = req.body.task;
-    if (!taskText || taskText.trim() === "") {
+    const { task, priority, dueDate } = req.body;
+    if (!task|| task.trim() === "") {
       return res.status(400).send("Task cannot be empty!");
     }
     const newTodo = new Todo({
-      task: taskText
+      task: task,
+      priority: priority,
+      dueDate: dueDate || null
     });
     await newTodo.save();
     console.log("Task saved successfully!");
