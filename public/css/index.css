@@ -1,24 +1,78 @@
 * {
     margin: 0px;
     padding: 0px;
-    line-height: 0px;
+    font-family: "Sekuya", system-ui;
+
 }
 
 .design {
     background-color: tomato;
-    height: 200px;
+    height: 156px;
     width: 600px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 41px;
     padding: 20px;
-}
-.design h1{
-    /* border: 2px solid black; */
-    padding: 20px;
-    margin-left: 150px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-.content form {
+.content {
+    margin-top: 10px;
    
+}
 
+.content input[name="task"] {
+    width: 253px;
+    height: 27px;
+    padding: 4px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    color: tomato;
+    font-weight: bold;
+    
+}
+.content input[name="task"]::placeholder{
+    color: tomato;
+}
+
+.content select[name="priority"] {
+    height: 35px;
+    padding: 4px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    color: tomato;
+    font-weight: bold;
+}
+
+.content input[name="dueDate"] {
+    height: 27px;
+    padding: 4px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    color: tomato;
+    font-weight: bold;
+}
+
+.content button {
+    height: 36px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+.savedTask{
+     width: 600px;
+     border: 2px solid black;
+     margin: auto;
 }
