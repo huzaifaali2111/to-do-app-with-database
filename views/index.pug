@@ -29,33 +29,29 @@
         </div>
     </div>
     <div class="savedTask">
-        <table>
-            <tr class="taskHead">
+    <table>
+        <thead>
+            <tr>
                 <th>Task</th>
                 <th>Priority</th>
                 <th>Due Date</th>
                 <th>Action</th>
             </tr>
-            <tr>
-                <td>Go to the Gym without hesitation</td>
-                <td>Medium</td>
-                <td>Decemeber,30, 2025</td>
-                <td>Decemeber,30, 2025</td>
-            </tr>
-            <tr>
-                <td>Go to the masjid for good </td>
-                <td>Medium</td>
-                <td>Decemeber,30, 2025</td>
-                <td><span class="fa-solid fa-trash"></span></td>
-            </tr>
-            <tr>
-                <td>Go to the walk for Health </td>
-                <td>Medium</td>
-                <td>Decemeber,30, 2025</td>
-                <td>Decemeber,30, 2025</td>
-            </tr>
-        </table>
-
+        <tbody> 
+          if todos && todos.length > 0
+            each item in todos
+              tr
+                td= item.task
+                td= item.priority
+                td= item.dueDate ? item.dueDate.toDateString() : '.'
+                td
+                  form(action=`/delete-todo/${item._id}` method="POST")
+                   button(type="submit")
+                    //- i.fa-solid.fa-pen-to-square.delete
+                    i.fa-solid.fa-trash.delete
+          else
+            tr
+              td(colspan="4" style="text-align:center") No tasks saved yet.              
     </div>
     <script src="/js/index.js"></script>
 </body>
