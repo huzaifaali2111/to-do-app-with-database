@@ -1,4 +1,29 @@
-h1{
-    color: tomato;
-    background-color: black;
+* {
+    margin: 0px;
+    padding: 0px;
+    line-height: 0px;
+}
+
+.design {
+    background-color: tomato;
+    height: 200px;
+    width: 600px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+}
+.design h1{
+    /* border: 2px solid black; */
+    padding: 20px;
+    margin-left: 150px;
+}
+
+.content {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    /* border: 2px solid black; */
+
+
 }

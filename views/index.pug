@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do </title>
     <link rel="stylesheet" href="/css/index.css">
 </head>
+
 <body>
-    <h1>This TO do App with database</h1>
+    
+    <div class="design">
+        <h1>Add Task Below</h1>
+        <div class="content">
+            <form action="/add-todo" method="POST">
+        <input type="text" placeholder="Type your task .... " name="task" required>
+        <!-- <label for="priority">Set Task priority</label> -->
+        <select name="priority" id="priority">
+            <option value="high">High</option>
+            <option value="medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+        <input type="date" name="task-deadline" id="task-deadline"> 
+        <button type="submit">Add Task </button>   
+        </form>
+        </div>
+    </div>
     <script src="/js/index.js"></script>
 </body>
+
 </html>
