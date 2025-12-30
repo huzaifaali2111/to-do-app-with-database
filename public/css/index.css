@@ -4,7 +4,10 @@
     font-family: "Sekuya", system-ui;
 
 }
-
+::selection{
+    color: white;
+    background-color: black;
+}
 .design {
     background-color: tomato;
     height: 156px;
@@ -12,7 +15,7 @@
     margin: auto;
     margin-top: 41px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0px 0px ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,10 +75,22 @@
     font-weight: bold;
 }
 .savedTask{
-     width: 600px;
-     border: 2px solid black;
+     width: 640px;
      margin: auto;
+
 }
-.taskHead th{
-    padding: 30px 10px 5px 2px;
+table {
+  border-collapse: collapse; 
+  border: 1px solid black; 
+  width: 100%; 
+}
+
+th, td {
+  border: 1px solid black; 
+  padding: 10px; 
+  text-align: center; 
+}
+
+th {
+  background-color: tomato; 
 }

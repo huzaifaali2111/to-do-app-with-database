@@ -1,11 +1,11 @@
 const express = require("express");
-const dotenv = require("dotenv");
-const connectDB = require("./config/db");
+// const dotenv = require("dotenv");
+// const connectDB = require("./config/db");
 const path = require('path');
 const mongoose = require('mongoose');
 const Todo = require("./models/todo");
-dotenv.config();
-connectDB();
+// dotenv.config();
+// connectDB();
 const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
