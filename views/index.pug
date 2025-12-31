@@ -40,19 +40,52 @@
         <tbody> 
           if todos && todos.length > 0
             each item in todos
-              tr
+              tr(id=`${item._id}`)
                 td= item.task
                 td= item.priority
                 td= item.dueDate ? item.dueDate.toDateString() : '.'
                 td
-                  form(action=`/delete-todo/${item._id}` method="POST")
-                   button(type="submit")
-                    //- i.fa-solid.fa-pen-to-square.delete
-                    i.fa-solid.fa-trash.delete
+                    form(action=`/delete-todo/${item._id}` method="POST")
+                        button(type="submit")
+                         i.fa-solid.fa-trash.delete 
+                    i.fa-solid.fa-pen-to-square.edit-icon.delete.editbtn(
+                        data-id=item._id
+                        data-task=item.task
+                        data-priority=item.priority
+                        data-date=item.dueDate ? item.dueDate.toISOString().split('T')[0] : ''
+                    ) 
+                   
           else
             tr
-              td(colspan="4" style="text-align:center") No tasks saved yet.              
+              td(colspan="4" style="text-align:center") No tasks saved yet. 
+
     </div>
+    
+    <div id="myModal" class="modal formdesign">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="editHead">
+                <span>Task</span>
+                <span>Priority</span>
+                <span>Due Date</span>
+            </div>
+            <div class="form_class">
+            <form action="" id="edit_form" class="edit_form" method="POST">
+                <input type="text" id="edit-task-input" name="task">
+                <select name="priority" id="edit-priority-select">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <input type="date" id="edit-date-input" name="dueDate">
+                <button type="submit">Save</button>
+            </form> 
+            </div>
+            
+        </div>
+
+    </div>
+    
     <script src="/js/index.js"></script>
 </body>
 

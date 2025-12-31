@@ -90,7 +90,8 @@ table {
     width: 100%;
 }
 
-th,td {
+th,
+td {
     border: 1px solid black;
     padding: 10px;
     text-align: center;
@@ -110,7 +111,118 @@ th {
     transform: scale(1.07);
 
 }
-.savedTask button{
+
+.savedTask button {
     border: none;
     background-color: white;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 605px;
+    border-radius: 4px;
+    height: 100px;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.savedTask form {
+    display: inline;
+}
+
+.formdesign input[name="task"] {
+    width: 253px;
+    height: 27px;
+    padding: 4px;
+    border: none;
+    outline: 1px solid black;
+    border-radius: 6px;
+    color: black;
+
+}
+
+.formdesign input[name="dueDate"] {
+    height: 27px;
+    padding: 4px;
+    outline: 1px solid black;
+    border: none;
+    border-radius: 6px;
+    color: black;
+
+}
+
+.formdesign button {
+    height: 36px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.formdesign select[name="priority"] {
+    height: 35px;
+    padding: 4px;
+    border: none;
+    border-radius: 6px;
+    outline: 1px solid black;
+    color: black;
+}
+.form_class{
+    margin: 27px;
+}
+.editHead{
+    display: flex;
+    /* gap: 114px; */
+    /* border: 2px solid black; */
+    width: 420px;
+    margin-left: 55px;
+    background-color: tomato;
+    font-weight: bold;
+    padding: 7px;
+    border-radius: 5px;
+    justify-content: space-around;
+    
 }
