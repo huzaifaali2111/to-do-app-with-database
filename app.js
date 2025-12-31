@@ -14,8 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'pug');
 
 app.get("/", async (req, res) => {
+
   try {
     const allTasks = await Todo.find();
+    // console.log(allTasks)
     res.render("index", { todos: allTasks });
   } catch (err) {
     console.error("Error fetching tasks:", err);
@@ -46,6 +48,16 @@ app.post("/add-todo", async (req, res) => {
 app.post("/delete-todo/:id", async (req, res) => {
   await Todo.findByIdAndDelete(req.params.id);
   res.redirect("/");
+});
+app.post("/update-todo/:id", async (req, res) => {
+  try {
+    const taskId = req.params.id;
+    const updatedData = req.body;
+    await Todo.findByIdAndUpdate(taskId, updatedData);
+    res.redirect("/");
+  } catch (err) {
+    res.status(500).send("Update failed");
+  }
 });
 
 app.listen(5000, () => {
